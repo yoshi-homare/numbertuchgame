@@ -1,0 +1,149 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 247, 129);
+  font-family: verdana, sans-serif;
+  padding-bottom: 50px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* ヘッダー */
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+  height: 80px;
+  line-height: 80px;
+  width: 300px;
+  background: rgb(240, 144, 208);
+  border-radius: 20px;
+}
+
+/* メイン */
+#container {
+  margin: 50px auto;
+}
+
+#timer {
+  text-align: center;
+  background: rgb(240, 144, 208);
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+#board {
+  list-style: none;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#board li {
+  background: rgb(255, 247, 129);
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  user-select: none;
+  box-shadow: 2px 4px rgb(0, 0, 0);
+}
+
+#btn {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  font-weight: bold;
+  background: rgb(0, 165, 206);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 40%;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 2px rgb(0, 0, 0);
+}
+
+#btn:active {
+  margin-top: 18px;
+  box-shadow: none;
+}
+
+/* フッター */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  margin-top: 0;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* ジャバスクリプト用クラス */
+#board li.pressed {
+  background: rgb(146, 146, 146);
+  box-shadow: none;
+  margin-top: 3px;
+  margin-left: 1px;
+}
+
+/* メディアクエリ */
+@media (min-width: 600px) {
+  body {
+    display: grid;
+    grid-template:
+    "h" 100px
+    "m" 1fr
+    "f" 50px;
+  }
+
+  /* ヘッダー */
+  header {
+    grid-area: h;
+  }
+
+  /* メイン */
+  main {
+    grid-area: m;
+  }
+
+  /* フッター */
+  footer {
+    grid-area: f;
+  }
+
+}
