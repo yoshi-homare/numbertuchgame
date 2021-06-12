@@ -117,8 +117,8 @@ footer p {
 #board li.pressed {
   background: rgb(146, 146, 146);
   box-shadow: none;
-  margin-top: 3px;
-  margin-left: 1px;
+  margin-top: 9px;
+  margin-left: 7px;
 }
 
 /* メディアクエリ */
